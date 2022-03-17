@@ -29,13 +29,13 @@ public class Login extends HttpServlet {
 		RequestDispatcher dispatcher = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection ("jdbc:mysql://localhost:3306/register","root","Vamosleo1022"); 
-			PreparedStatement pst = con.prepareStatement("select * from users where uname=? and upwd=?"); 
+			Connection con = DriverManager.getConnection ("jdbc:mysql://localhost:3306/employee_111915013","root","Vamosleo1022"); 
+			PreparedStatement pst = con.prepareStatement("select * from basic_details_111915013 where first_name=? and cont=?"); 
 			pst.setString(1, uname);
 			pst.setString(2, upwd);
 			ResultSet rs=pst.executeQuery();
 			if(rs.next()){
-				session.setAttribute("name", rs.getString("uname"));
+				session.setAttribute("name", rs.getString("last_name"));
 				dispatcher=request.getRequestDispatcher("session.jsp");
 			}
 			else {

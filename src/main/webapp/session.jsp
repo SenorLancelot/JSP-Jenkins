@@ -17,15 +17,12 @@
 						<h2 class="form-title">Search</h2>
 						<form method="post" action="data" class="register-form"
 							id="search-form">
-							<div class="form-group">
-								<label for="lastname"><i
-									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="lastname" id="lastname"
-									placeholder="Your Name" />
-							</div>
 							<div class="form-group form-button">
 								<input type="submit" name="search" id="search"
 									class="form-submit" value="Search" />
+									<li class="form-group form-button"><a
+						class="form-group form-button" href="logout">Logout</a></li>
+									
 							</div>
 						</form>
 						

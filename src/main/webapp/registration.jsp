@@ -12,6 +12,7 @@
 
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 <input type="hidden" id="status" value="<%= request.getAttribute("status")%>">
@@ -27,30 +28,39 @@
 						<form method="Post" action="register" class="register-form"
 							id="register-form">
 							<div class="form-group">
-								<label for="uname"><i
+								<label for="fname"><i
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
-									type="text" name="uname" id="uname" placeholder="User Name" />
-							</div>
-							<div class="form-group">
-								<label for="pass"><i class="zmdi zmdi-lock"></i></label> <input
-									type="password" name="pass" id="pass" placeholder="Password" />
-							</div>
-							<div class="form-group">
-								<label for="fname"><i class="zmdi zmdi-lock"></i></label> <input
 									type="text" name="fname" id="fname" placeholder="First Name" />
 							</div>
 							<div class="form-group">
 								<label for="lname"><i class="zmdi zmdi-lock"></i></label> <input
-									type="password" name="lname" id="lname" placeholder="Last Name" />
+									type="text" name="lname" id="lname" placeholder="Last Name" />
+							</div>
+							
+							<div class="form-group">
+								<label for="dob"><i class="zmdi zmdi-lock"></i></label> <input
+									type="text" name="dob" id="dob" placeholder="Date of birth DDMMYYYY" />
+							</div>
+							
+							<div class="form-group">
+								<label for="cont"><i class="zmdi zmdi-lock-outline"></i></label>
+								<input type="password" name="cont" id="cont"
+									placeholder="Contact" />
 							</div>
 							<div class="form-group">
-								<label for="email"><i class="zmdi zmdi-email"></i></label> <input
-									type="email" name="email" id="email" placeholder="Your Email" />
+								<label for="jrole"><i class="zmdi zmdi-lock-outline"></i></label>
+								<input type="text" name="jrole" id="jrole"
+									placeholder="Job role" />
 							</div>
 							<div class="form-group">
-								<label for="dob"><i class="zmdi zmdi-lock-outline"></i></label>
-								<input type="text" name="dob" id="dob"
-									placeholder="Date of birth DDMMYYYY" />
+								<label for="mon_salary"><i class="zmdi zmdi-lock-outline"></i></label>
+								<input type="text" name="mon_salary" id="mon_salary"
+									placeholder="Monthly Salary" />
+							</div>
+							<div class="form-group">
+								<label for="yearly_bonus"><i class="zmdi zmdi-lock-outline"></i></label>
+								<input type="text" name="yearly_bonus" id="yearly_bonus"
+									placeholder="Yearly Bonus" />
 							</div>
 							<div class="form-group form-button">
 								<input type="submit" name="signup" id="signup"
@@ -71,18 +81,7 @@
 
 
 	</div>
-	<!-- JS -->
-	<script src="vendor/jquery/jquery.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<link rel="stylesheet" href="alert/dist/sweetalert.css">
- 
-<script type="text/javascript">
-var status=document.getElementById("status"),value;
-if(status=="success"){
-	swal("Congrats","Account Created Successfully","success");
-}
-</script>
+	
 </body>
 <!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
